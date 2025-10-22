@@ -12,6 +12,9 @@ const FRICTION = 100
 # Reference to the Timer (used for coyote time)
 @onready var timer = $Timer # keeps a small extra time margin
 
+func _ready():
+	jump_label = get_node("/root/Ui/Sprite2D/JumpLabel")
+
 # variables
 var accum = 0  # Acumulador que se usa para mover la cámara en el eje X
 var itera = 0  # Contador de "iteraciones" (cuántas veces se ha movido hacia la derecha)
