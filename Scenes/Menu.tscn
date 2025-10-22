@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjc23l2748j4h"]
+
+[ext_resource type="Texture2D" uid="uid://cgij287g4rv4b" path="res://Assets/Other/MazeBound Logo.png" id="1_3kf3n"]
+[ext_resource type="Texture2D" uid="uid://barubkorn7wjc" path="res://Assets/Scenary/Yellow.png" id="1_6pedr"]
+[ext_resource type="Script" uid="uid://q7lpe8e2vkf" path="res://Scripts/menu.gd" id="1_syfuq"]
+
+[node name="Menu" type="Node"]
+script = ExtResource("1_syfuq")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6pedr")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.331
+anchor_top = 0.441
+anchor_right = 0.669
+anchor_bottom = 0.559
+offset_left = -0.312042
+offset_top = 0.231995
+offset_right = 0.311951
+offset_bottom = -0.231995
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3kf3n")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 0.585
+anchor_right = 0.452
+anchor_bottom = 0.673
+offset_left = 0.0159912
+offset_top = -0.0800171
+offset_right = 0.295959
+offset_bottom = -0.104034
+theme_override_font_sizes/font_size = 35
+text = "Nivel 1"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 0.585
+anchor_right = 0.452
+anchor_bottom = 0.673
+offset_left = 153.016
+offset_top = 0.919983
+offset_right = 153.296
+offset_bottom = 0.895966
+theme_override_font_sizes/font_size = 35
+text = "Nivel 2"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
