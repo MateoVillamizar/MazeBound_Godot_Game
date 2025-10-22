@@ -1,6 +1,5 @@
-[gd_scene load_steps=27 format=3 uid="uid://bb3t3mv33lsuv"]
+[gd_scene load_steps=10 format=3 uid="uid://bb3t3mv33lsuv"]
 
-[ext_resource type="Script" uid="uid://hmxwry4tgvcc" path="res://Scripts/game_manager.gd" id="1_ebdl0"]
 [ext_resource type="Texture2D" uid="uid://bdtalujxersyo" path="res://Assets/Scenary/Brown.png" id="2_du5ev"]
 [ext_resource type="Texture2D" uid="uid://d2mrlquf8fcxa" path="res://Assets/Scenary/Terrain (16x16).png" id="3_yidnl"]
 [ext_resource type="PackedScene" uid="uid://um27qp0riaad" path="res://Scenes/character_body_2d.tscn" id="5_nj6vl"]
@@ -8,14 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://eltdw28mak6d" path="res://Scenes/collectible_coin.tscn" id="7_522i3"]
 [ext_resource type="PackedScene" uid="uid://cjc23l2748j4h" path="res://Scenes/Menu.tscn" id="9_ebdl0"]
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_mf6ls"]
-[ext_resource type="Texture2D" uid="uid://bij345fjito34" path="res://Assets/Items/CollectibleCoin.png" id="9_wxvsr"]
-[ext_resource type="Texture2D" uid="uid://lo304to5gwqi" path="res://Assets/UI y Krita/FrameCharacter back.png" id="10_bb8u3"]
-[ext_resource type="Texture2D" uid="uid://ctpath2ulw3g3" path="res://Assets/UI y Krita/HeadCharacter.PNG" id="11_mf6ls"]
-[ext_resource type="Texture2D" uid="uid://by3dgupo4efjk" path="res://Assets/UI y Krita/FrameCharacter front.png" id="12_un7op"]
-[ext_resource type="Texture2D" uid="uid://do5nwsb4nylje" path="res://Assets/UI y Krita/Capa de Pintura 3.PNG" id="13_bb8u3"]
-[ext_resource type="Texture2D" uid="uid://5b77pl3x4yrd" path="res://Assets/UI y Krita/Capa de pintura 1.PNG" id="13_wxvsr"]
-[ext_resource type="Texture2D" uid="uid://cxku2q7lgfe6l" path="res://Assets/UI y Krita/Capa de pintura 2.PNG" id="14_bb8u3"]
-[ext_resource type="Texture2D" uid="uid://t1eywf4ceoim" path="res://Assets/UI y Krita/Jumps.png" id="15_pi148"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("3_yidnl")
@@ -252,63 +243,7 @@ texture = ExtResource("3_yidnl")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7mycd")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0q2yv"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bb8u3"]
-atlas = ExtResource("9_wxvsr")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mf6ls"]
-atlas = ExtResource("9_wxvsr")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_un7op"]
-atlas = ExtResource("9_wxvsr")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hkc8d"]
-atlas = ExtResource("9_wxvsr")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rtl6i"]
-atlas = ExtResource("9_wxvsr")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pi148"]
-atlas = ExtResource("9_wxvsr")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_114dm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bb8u3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mf6ls")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_un7op")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hkc8d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rtl6i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pi148")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Node" type="Node"]
-
-[node name="GameManager" type="Node2D" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_ebdl0")
 
 [node name="SceneObjects" type="Node" parent="."]
 
@@ -376,101 +311,5 @@ position = Vector2(1553, 376)
 [node name="Trophy" parent="SceneObjects" instance=ExtResource("9_mf6ls")]
 position = Vector2(1917, 29)
 target_level = ExtResource("9_ebdl0")
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Panel" type="Panel" parent="UI"]
-anchors_preset = -1
-anchor_right = 0.12
-anchor_bottom = 0.062
-offset_left = 2.0
-offset_top = 609.0
-offset_right = -45.24
-offset_bottom = 608.824
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_0q2yv")
-
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = -2.0
-offset_right = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Panel"]
-texture_filter = 1
-position = Vector2(16, 20)
-scale = Vector2(2.3, 2.3)
-sprite_frames = SubResource("SpriteFrames_114dm")
-autoplay = "default"
-frame_progress = 0.524357
-
-[node name="TextureRect" type="TextureRect" parent="UI"]
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 43.0
-offset_bottom = 47.0
-
-[node name="TextureRect" type="TextureRect" parent="UI/TextureRect"]
-layout_mode = 0
-offset_top = -1.0
-offset_right = 57.0
-offset_bottom = 48.0
-texture = ExtResource("10_bb8u3")
-expand_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="UI/TextureRect"]
-position = Vector2(23, 19)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("11_mf6ls")
-
-[node name="TextureRect2" type="TextureRect" parent="UI/TextureRect"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -5.0
-offset_right = 59.0
-offset_bottom = 48.0
-texture = ExtResource("12_un7op")
-expand_mode = 1
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="UI/TextureRect"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 0
-offset_left = 67.0
-offset_top = -4.0
-offset_right = 467.0
-offset_bottom = 196.0
-scale = Vector2(0.25, 0.25)
-max_value = 8.0
-texture_under = ExtResource("13_bb8u3")
-texture_over = ExtResource("13_wxvsr")
-texture_progress = ExtResource("14_bb8u3")
-
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
-texture_filter = 1
-position = Vector2(104, 629)
-texture = ExtResource("15_pi148")
-
-[node name="JumpLabel" type="Label" parent="UI/Sprite2D"]
-unique_name_in_owner = true
-texture_filter = 1
-offset_left = 21.0
-offset_top = -22.0
-offset_right = 44.0
-offset_bottom = 20.0
-theme_override_font_sizes/font_size = 30
-text = "60"
-horizontal_alignment = 1
 
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]

@@ -6,6 +6,7 @@ var ui_node
 func _ready():
 	ui_node = get_node("/root/Ui")
 	ui_node.hide()
+	SingleGameManager.reset_stats() 
 
 # Muestra el árbol al terminar
 func _exit_tree():

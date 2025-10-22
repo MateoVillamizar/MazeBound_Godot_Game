@@ -3,9 +3,9 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 const FRICTION = 100
+var jump_label
 @onready var player_sprite: AnimatedSprite2D = $PlayerSprite
 @onready var cam = $Camera2D # Reference to the camera
-@onready var jump_label: Label = %JumpLabel # Reference to JumpLabel
 
 @onready var cam_timer: Timer = $CamTimer # Reference to CamTimer
 

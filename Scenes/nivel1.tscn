@@ -1,6 +1,5 @@
-[gd_scene load_steps=46 format=3 uid="uid://gnf7iarouppq"]
+[gd_scene load_steps=19 format=3 uid="uid://gnf7iarouppq"]
 
-[ext_resource type="Script" uid="uid://hmxwry4tgvcc" path="res://Scripts/game_manager.gd" id="1_p8b2h"]
 [ext_resource type="Texture2D" uid="uid://crbhy63vicuhh" path="res://Assets/Scenary/Gray.png" id="2_j1oeo"]
 [ext_resource type="Texture2D" uid="uid://d2mrlquf8fcxa" path="res://Assets/Scenary/Terrain (16x16).png" id="3_y2dbi"]
 [ext_resource type="Texture2D" uid="uid://bij345fjito34" path="res://Assets/Items/CollectibleCoin.png" id="4_mhdob"]
@@ -10,13 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dqahk48negeah" path="res://Scenes/collectible_fruit.tscn" id="8_qbrr2"]
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_3pkkb"]
 [ext_resource type="PackedScene" uid="uid://bb3t3mv33lsuv" path="res://Scenes/nivel2.tscn" id="10_j1oeo"]
-[ext_resource type="Texture2D" uid="uid://bjohafekm2md2" path="res://Assets/Items/Cherries.png" id="11_y2dbi"]
-[ext_resource type="Texture2D" uid="uid://lo304to5gwqi" path="res://Assets/UI y Krita/FrameCharacter back.png" id="12_mhdob"]
-[ext_resource type="Texture2D" uid="uid://ctpath2ulw3g3" path="res://Assets/UI y Krita/HeadCharacter.PNG" id="13_3vjri"]
-[ext_resource type="Texture2D" uid="uid://by3dgupo4efjk" path="res://Assets/UI y Krita/FrameCharacter front.png" id="13_hcf7f"]
-[ext_resource type="Texture2D" uid="uid://cxmuelclthe86" path="res://Assets/UI y Krita/Marco.png" id="15_ue8p2"]
-[ext_resource type="Texture2D" uid="uid://dmuifd2ocp8fm" path="res://Assets/UI y Krita/Gradient.png" id="16_qbrr2"]
-[ext_resource type="Texture2D" uid="uid://t1eywf4ceoim" path="res://Assets/UI y Krita/Jumps.png" id="17_3pkkb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("3_y2dbi")
@@ -289,140 +281,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y2dbi"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ue8p2"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qbrr2"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3pkkb"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m0rvo"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c87ai"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1rmy"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s5ag1"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(192, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a3pjr"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bqwh3"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(256, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2ovf6"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(288, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_37y0m"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(320, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ro156"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(352, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7sncn"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(384, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5l8g1"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(416, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fw44r"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(448, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ym12i"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(480, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0uxik"]
-atlas = ExtResource("11_y2dbi")
-region = Rect2(512, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_j1oeo"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ue8p2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qbrr2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3pkkb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m0rvo")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c87ai")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a1rmy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s5ag1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a3pjr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bqwh3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2ovf6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_37y0m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ro156")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7sncn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5l8g1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fw44r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ym12i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0uxik")
-}],
-"loop": true,
-"name": &"default",
-"speed": 20.0
-}]
-
 [node name="Node" type="Node"]
-
-[node name="GameManager" type="Node2D" parent="."]
-unique_name_in_owner = true
-script = ExtResource("1_p8b2h")
 
 [node name="SceneObjects" type="Node" parent="."]
 
@@ -475,127 +334,34 @@ wait_time = 0.1
 [node name="Item" parent="SceneObjects" instance=ExtResource("7_ue8p2")]
 position = Vector2(173, 69)
 
-[node name="FruitCollectibles" type="Node" parent="SceneObjects"]
+[node name="Collectibles" type="Node" parent="SceneObjects"]
 
-[node name="CollectibleFruit1" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible1" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(189, 438)
 
-[node name="CollectibleFruit2" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible2" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(234, 52)
 
-[node name="CollectibleFruit3" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible3" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(766, 341)
 
-[node name="CollectibleFruit4" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible4" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(295, 181)
 
-[node name="CollectibleFruit5" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible5" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(797, 118)
 
-[node name="CollectibleFruit6" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible6" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(2159, 465)
 
-[node name="CollectibleFruit7" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible7" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(1341, 437)
 
-[node name="CollectibleFruit8" parent="SceneObjects/FruitCollectibles" instance=ExtResource("8_qbrr2")]
+[node name="Collectible8" parent="SceneObjects/Collectibles" instance=ExtResource("8_qbrr2")]
 position = Vector2(1930, 147)
 
 [node name="Trophy" parent="SceneObjects" instance=ExtResource("9_3pkkb")]
 position = Vector2(2140, 29)
 target_level = ExtResource("10_j1oeo")
-
-[node name="UI" type="CanvasLayer" parent="."]
-
-[node name="Panel" type="Panel" parent="UI"]
-anchors_preset = -1
-anchor_right = 0.12
-anchor_bottom = 0.062
-offset_top = 609.0
-offset_right = -47.24
-offset_bottom = 608.824
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_y2dbi")
-
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.0
-offset_top = -2.0
-offset_right = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/Panel"]
-texture_filter = 1
-position = Vector2(16, 20)
-scale = Vector2(1.7, 1.7)
-sprite_frames = SubResource("SpriteFrames_j1oeo")
-autoplay = "default"
-
-[node name="TextureRect" type="TextureRect" parent="UI"]
-offset_left = 3.0
-offset_top = 7.0
-offset_right = 43.0
-offset_bottom = 47.0
-
-[node name="TextureRect" type="TextureRect" parent="UI/TextureRect"]
-layout_mode = 0
-offset_top = -1.0
-offset_right = 57.0
-offset_bottom = 48.0
-texture = ExtResource("12_mhdob")
-expand_mode = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="UI/TextureRect"]
-position = Vector2(23, 19)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("13_3vjri")
-
-[node name="TextureRect2" type="TextureRect" parent="UI/TextureRect"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -5.0
-offset_right = 59.0
-offset_bottom = 48.0
-texture = ExtResource("13_hcf7f")
-expand_mode = 1
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="UI/TextureRect"]
-unique_name_in_owner = true
-texture_filter = 1
-layout_mode = 0
-offset_left = 60.0
-offset_top = -14.0
-offset_right = 310.0
-offset_bottom = 111.0
-scale = Vector2(0.5, 0.5)
-max_value = 8.0
-texture_over = ExtResource("15_ue8p2")
-texture_progress = ExtResource("16_qbrr2")
-
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
-texture_filter = 1
-position = Vector2(104, 629)
-texture = ExtResource("17_3pkkb")
-
-[node name="JumpLabel" type="Label" parent="UI/Sprite2D"]
-unique_name_in_owner = true
-texture_filter = 1
-offset_left = 21.0
-offset_top = -22.0
-offset_right = 44.0
-offset_bottom = 20.0
-theme_override_font_sizes/font_size = 30
-text = "40"
-horizontal_alignment = 1
 
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]

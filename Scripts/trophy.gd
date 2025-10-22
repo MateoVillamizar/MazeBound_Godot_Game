@@ -13,4 +13,5 @@ func _on_body_entered(body: Node2D) -> void:
 # Función auxiliar que se ejecuta de forma diferida
 # Diferir = posponer una acción para que se ejecute en un momento seguro
 func _change_scene() -> void:
-	get_tree().change_scene_to_packed(target_level) 
+	get_tree().change_scene_to_packed(target_level)
+	SingleGameManager.reset_stats() 
