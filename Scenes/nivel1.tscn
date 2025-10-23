@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://gnf7iarouppq"]
+[gd_scene load_steps=21 format=3 uid="uid://gnf7iarouppq"]
 
 [ext_resource type="Texture2D" uid="uid://crbhy63vicuhh" path="res://Assets/Scenary/Gray.png" id="2_j1oeo"]
 [ext_resource type="Texture2D" uid="uid://d2mrlquf8fcxa" path="res://Assets/Scenary/Terrain (16x16).png" id="3_y2dbi"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_3pkkb"]
 [ext_resource type="PackedScene" uid="uid://bb3t3mv33lsuv" path="res://Scenes/nivel2.tscn" id="10_j1oeo"]
 [ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scenes/spawner.gd" id="10_y2dbi"]
+[ext_resource type="PackedScene" uid="uid://dx85ilowwqkdt" path="res://Scenes/enemy_mask_man.tscn" id="11_y2dbi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("3_y2dbi")
@@ -372,6 +373,8 @@ script = ExtResource("10_y2dbi")
 [node name="Timer" type="Timer" parent="Spawner"]
 wait_time = 3.0
 autostart = true
+
+[node name="EnemyMaskMan" parent="." instance=ExtResource("11_y2dbi")]
 
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
