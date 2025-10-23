@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://dqahk48negeah"]
 
-[ext_resource type="Script" uid="uid://djpn2t75brem5" path="res://Scripts/collectible_fruit.gd" id="1_4r5y5"]
+[ext_resource type="Script" uid="uid://djpn2t75brem5" path="res://Scripts/collectible.gd" id="1_4r5y5"]
 [ext_resource type="Texture2D" uid="uid://bij345fjito34" path="res://Assets/Items/CollectibleCoin.png" id="2_4r5y5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdo2q"]

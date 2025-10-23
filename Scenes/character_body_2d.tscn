@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dx1a54qv2r05k" path="res://Assets/Characters/MainCharacterIdle (32 x 32).png" id="1_it8n0"]
 [ext_resource type="Texture2D" uid="uid://6idbmm15hctg" path="res://Assets/Characters/MainCharacterRun (32 x 32).png" id="2_gbyq6"]
-[ext_resource type="AudioStream" uid="uid://detmndt4b5lkt" path="res://Assets/Characters/pixel_jump_sound.mp3" id="4_44cfe"]
+[ext_resource type="AudioStream" uid="uid://detmndt4b5lkt" path="res://Audio/pixel_jump_sound.mp3" id="4_44cfe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_it8n0"]
 atlas = ExtResource("1_it8n0")
@@ -174,4 +174,4 @@ one_shot = true
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_44cfe")
-volume_db = -10.0
+volume_db = -5.0
