@@ -1,8 +1,9 @@
-# ⚔️ MazeBound
+# ⚔️ MazeBound: A Godot Game
 
 **MazeBound** es un videojuego de plataformas 2D con estilo retro desarrollado en **Godot Engine** en el que el jugador controla a un caballero atrapado en una mazmorra llena de trampas y desafíos, y su objetivo es **escapar superando cada nivel** antes de que su energía o salud se agoten.
 En cada nivel, el caballero debe recolectar monedas o artefactos mientras busca la salida. Sin embargo, cada salto realizado **reduce un contador**, lo que añade una capa estratégica al movimiento.
 
+**Author:** Mateo Villamizar Marin
 ---
 
 ## Características principales
