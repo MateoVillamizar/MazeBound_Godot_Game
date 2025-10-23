@@ -375,6 +375,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="EnemyMaskMan" parent="." instance=ExtResource("11_y2dbi")]
+position = Vector2(146, 523)
 
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

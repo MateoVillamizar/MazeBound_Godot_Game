@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://dx85ilowwqkdt"]
+[gd_scene load_steps=17 format=3 uid="uid://dx85ilowwqkdt"]
 
+[ext_resource type="Script" uid="uid://r1ro5n15ae5p" path="res://Scenes/enemy_mask_man.gd" id="1_e3c50"]
 [ext_resource type="Texture2D" uid="uid://1cnn5xad2ucy" path="res://Assets/Characters/Enemy/Run (32x32).png" id="1_umn70"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3c50"]
@@ -95,10 +96,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umn70"]
-size = Vector2(19, 26)
+size = Vector2(15.3333, 27)
 
 [node name="EnemyMaskMan" type="CharacterBody2D"]
 position = Vector2(10, 10)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_e3c50")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -107,7 +110,7 @@ sprite_frames = SubResource("SpriteFrames_cyq4e")
 animation = &"Run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20.5, 18)
+position = Vector2(20.3333, 18.5)
 shape = SubResource("RectangleShape2D_umn70")
 
 [node name="Right" type="RayCast2D" parent="."]
