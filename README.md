@@ -4,6 +4,7 @@
 En cada nivel, el caballero debe recolectar monedas o artefactos mientras busca la salida. Sin embargo, cada salto realizado **reduce un contador**, lo que añade una capa estratégica al movimiento.
 
 **Author:** Mateo Villamizar Marin
+
 ---
 
 ## Características principales
