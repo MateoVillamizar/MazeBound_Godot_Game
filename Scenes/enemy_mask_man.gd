@@ -22,7 +22,7 @@ func flip():
 		$AnimatedSprite2D.scale.x *= -1
 
 # Gravedad y movimiento al enemigo
-func _physics_process(delta):
+func _physics_process( _delta):
 	velocity.y += GRAVITY
 	flip()
 	move_and_slide()
