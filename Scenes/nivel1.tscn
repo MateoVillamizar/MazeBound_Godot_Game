@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://gnf7iarouppq"]
+[gd_scene load_steps=22 format=3 uid="uid://gnf7iarouppq"]
 
 [ext_resource type="Texture2D" uid="uid://crbhy63vicuhh" path="res://Assets/Scenary/Gray.png" id="2_j1oeo"]
 [ext_resource type="Texture2D" uid="uid://d2mrlquf8fcxa" path="res://Assets/Scenary/Terrain (16x16).png" id="3_y2dbi"]
@@ -9,8 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://dqahk48negeah" path="res://Scenes/collectible.tscn" id="8_qbrr2"]
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_3pkkb"]
 [ext_resource type="PackedScene" uid="uid://bb3t3mv33lsuv" path="res://Scenes/nivel2.tscn" id="10_j1oeo"]
-[ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scenes/spawner.gd" id="10_y2dbi"]
+[ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scripts/spawner.gd" id="10_y2dbi"]
 [ext_resource type="PackedScene" uid="uid://dx85ilowwqkdt" path="res://Scenes/enemy_mask_man.tscn" id="11_y2dbi"]
+[ext_resource type="PackedScene" uid="uid://drt4v34mcprc4" path="res://Scenes/enemy_ninja_frog.tscn" id="12_mhdob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("3_y2dbi")
@@ -377,6 +378,9 @@ autostart = true
 
 [node name="EnemyMaskMan" parent="." instance=ExtResource("11_y2dbi")]
 position = Vector2(146, 523)
+
+[node name="EnemyNinjaFrog" parent="." instance=ExtResource("12_mhdob")]
+position = Vector2(607, 513)
 
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

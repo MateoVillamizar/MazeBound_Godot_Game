@@ -1,6 +1,6 @@
 [gd_scene load_steps=33 format=3 uid="uid://drt4v34mcprc4"]
 
-[ext_resource type="Script" uid="uid://r1ro5n15ae5p" path="res://Scenes/enemy_mask_man.gd" id="1_joj25"]
+[ext_resource type="Script" uid="uid://bgmpbi25xn1wg" path="res://Scripts/enemy_ninja_frog.gd" id="1_0mll7"]
 [ext_resource type="Texture2D" uid="uid://bq6x02tl373um" path="res://Assets/Characters/NinjaFrog/Fall (32x32).png" id="2_joj25"]
 [ext_resource type="Texture2D" uid="uid://bv73cdhlwm8rm" path="res://Assets/Characters/NinjaFrog/Idle (32x32).png" id="3_0mll7"]
 [ext_resource type="Texture2D" uid="uid://n1alolf605b3" path="res://Assets/Characters/NinjaFrog/Jump (32x32).png" id="4_vce3s"]
@@ -207,10 +207,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_umn70"]
 size = Vector2(16.3333, 21.6667)
 
-[node name="EnemyMaskMan" type="CharacterBody2D"]
-position = Vector2(10, 10)
-scale = Vector2(1.5, 1.5)
-script = ExtResource("1_joj25")
+[node name="EnemyNinjaFrog" type="CharacterBody2D"]
+position = Vector2(8, 14)
+scale = Vector2(1.7, 1.7)
+collision_layer = 8
+collision_mask = 7
+script = ExtResource("1_0mll7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -226,9 +228,9 @@ shape = SubResource("RectangleShape2D_umn70")
 [node name="Right" type="RayCast2D" parent="."]
 position = Vector2(21, 19)
 target_position = Vector2(80, 0)
-collision_mask = 4
+collision_mask = 6
 
 [node name="Near" type="RayCast2D" parent="."]
 position = Vector2(21, 19)
 target_position = Vector2(20, 0)
-collision_mask = 4
+collision_mask = 6

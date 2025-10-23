@@ -7,6 +7,7 @@
 size = Vector2(47, 44)
 
 [node name="Trophy" type="Area2D"]
+collision_mask = 7
 script = ExtResource("1_kn7si")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

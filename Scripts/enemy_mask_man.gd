@@ -10,10 +10,16 @@ func _ready():
 
 # Dos funciones de colisión que referencian los RayCast2D
 func _next_to_left_wall():
-	return $Left.is_colliding()
+	var left_node = get_node("/root/Node/EnemyMaskMan/Left")  # Ruta explícita a Left
+	if left_node:
+		return left_node.is_colliding()
+	return false
 
 func _next_to_right_wall():
-	return $Right.is_colliding()
+	var right_node = get_node("/root/Node/EnemyMaskMan/Right")   # Ruta explícita a Right
+	if right_node:
+		return right_node.is_colliding()
+	return false
 
 # Función para dar giro de 180 grados al enemigo
 func flip():
@@ -22,7 +28,7 @@ func flip():
 		$AnimatedSprite2D.scale.x *= -1
 
 # Gravedad y movimiento al enemigo
-func _physics_process( _delta):
+func _physics_process(_delta):
 	velocity.y += GRAVITY
 	flip()
 	move_and_slide()

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://um27qp0riaad" path="res://Scenes/character_body_2d.tscn" id="5_nj6vl"]
 [ext_resource type="Script" uid="uid://d4hgorg87qmyb" path="res://Scripts/character_body_2d.gd" id="6_gho1a"]
 [ext_resource type="PackedScene" uid="uid://eltdw28mak6d" path="res://Scenes/collectible_coin.tscn" id="7_522i3"]
-[ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scenes/spawner.gd" id="8_522i3"]
+[ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scripts/spawner.gd" id="8_522i3"]
 [ext_resource type="PackedScene" uid="uid://cjc23l2748j4h" path="res://Scenes/Menu.tscn" id="9_ebdl0"]
 [ext_resource type="PackedScene" uid="uid://dx85ilowwqkdt" path="res://Scenes/enemy_mask_man.tscn" id="9_l8p0v"]
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_mf6ls"]
