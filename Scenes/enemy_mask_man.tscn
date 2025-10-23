@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://dx85ilowwqkdt"]
 
 [ext_resource type="Script" uid="uid://r1ro5n15ae5p" path="res://Scenes/enemy_mask_man.gd" id="1_e3c50"]
-[ext_resource type="Texture2D" uid="uid://1cnn5xad2ucy" path="res://Assets/Characters/Enemy/Run (32x32).png" id="1_umn70"]
+[ext_resource type="Texture2D" uid="uid://1cnn5xad2ucy" path="res://Assets/Characters/MaskMan/Run (32x32).png" id="1_umn70"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3c50"]
 atlas = ExtResource("1_umn70")
