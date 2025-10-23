@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bb3t3mv33lsuv"]
+[gd_scene load_steps=11 format=3 uid="uid://bb3t3mv33lsuv"]
 
 [ext_resource type="Texture2D" uid="uid://bdtalujxersyo" path="res://Assets/Scenary/Brown.png" id="2_du5ev"]
 [ext_resource type="Texture2D" uid="uid://d2mrlquf8fcxa" path="res://Assets/Scenary/Terrain (16x16).png" id="3_yidnl"]
 [ext_resource type="PackedScene" uid="uid://um27qp0riaad" path="res://Scenes/character_body_2d.tscn" id="5_nj6vl"]
 [ext_resource type="Script" uid="uid://d4hgorg87qmyb" path="res://Scripts/character_body_2d.gd" id="6_gho1a"]
 [ext_resource type="PackedScene" uid="uid://eltdw28mak6d" path="res://Scenes/collectible_coin.tscn" id="7_522i3"]
+[ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scenes/spawner.gd" id="8_522i3"]
 [ext_resource type="PackedScene" uid="uid://cjc23l2748j4h" path="res://Scenes/Menu.tscn" id="9_ebdl0"]
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_mf6ls"]
 
@@ -312,4 +313,13 @@ position = Vector2(1553, 376)
 position = Vector2(1917, 29)
 target_level = ExtResource("9_ebdl0")
 
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(953, 230)
+script = ExtResource("8_522i3")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 3.0
+autostart = true
+
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

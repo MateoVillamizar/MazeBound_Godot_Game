@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://gnf7iarouppq"]
+[gd_scene load_steps=20 format=3 uid="uid://gnf7iarouppq"]
 
 [ext_resource type="Texture2D" uid="uid://crbhy63vicuhh" path="res://Assets/Scenary/Gray.png" id="2_j1oeo"]
 [ext_resource type="Texture2D" uid="uid://d2mrlquf8fcxa" path="res://Assets/Scenary/Terrain (16x16).png" id="3_y2dbi"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://um27qp0riaad" path="res://Scenes/character_body_2d.tscn" id="5_hcf7f"]
 [ext_resource type="Script" uid="uid://d4hgorg87qmyb" path="res://Scripts/character_body_2d.gd" id="6_3vjri"]
 [ext_resource type="PackedScene" uid="uid://cevde8v67d72k" path="res://Scenes/item.tscn" id="7_ue8p2"]
-[ext_resource type="PackedScene" uid="uid://dqahk48negeah" path="res://Scenes/collectiblet.tscn" id="8_qbrr2"]
+[ext_resource type="PackedScene" uid="uid://dqahk48negeah" path="res://Scenes/collectible.tscn" id="8_qbrr2"]
 [ext_resource type="PackedScene" uid="uid://ilr8hiw7jsow" path="res://Scenes/trophy.tscn" id="9_3pkkb"]
 [ext_resource type="PackedScene" uid="uid://bb3t3mv33lsuv" path="res://Scenes/nivel2.tscn" id="10_j1oeo"]
+[ext_resource type="Script" uid="uid://dr4fq25vn5y5a" path="res://Scenes/spawner.gd" id="10_y2dbi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("3_y2dbi")
@@ -364,4 +365,13 @@ position = Vector2(1930, 147)
 position = Vector2(2140, 29)
 target_level = ExtResource("10_j1oeo")
 
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(1150, 228)
+script = ExtResource("10_y2dbi")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 3.0
+autostart = true
+
 [connection signal="timeout" from="SceneObjects/Player/CamTimer" to="SceneObjects/Player" method="_on_cam_timer_timeout"]
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
