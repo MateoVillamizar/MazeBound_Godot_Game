@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const SPEED = 100.0
+const SPEED = 80
 const GRAVITY = 90
-const JUMP_POWER = -900.0
+const JUMP_POWER = -1000.0
 var n_jumps = 1
 
 func _ready():
@@ -18,7 +18,7 @@ func seePlayer():
 	var right_node = get_node("/root/Node/EnemyNinjaFrog/Right")  # Ruta explícita a Right
 	return right_node.is_colliding()
 
-# Funciones del movmiento y salto del enemigo
+# Funciones del movimiento y salto del enemigo
 func move():
 	velocity.x = SPEED
 	$AnimatedSprite2D.play("Run")
