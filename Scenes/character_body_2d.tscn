@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dx1a54qv2r05k" path="res://Assets/Characters/MainCharacter/MainCharacterIdle (32 x 32).png" id="1_it8n0"]
 [ext_resource type="Texture2D" uid="uid://6idbmm15hctg" path="res://Assets/Characters/MainCharacter/MainCharacterRun (32 x 32).png" id="2_gbyq6"]
+[ext_resource type="Texture2D" uid="uid://ffjfud6xanp1" path="res://Assets/Characters/MainCharacter/MainCharacterJump (32 X 32).png" id="2_pbq55"]
 [ext_resource type="AudioStream" uid="uid://detmndt4b5lkt" path="res://Audio/pixel_jump_sound.mp3" id="4_44cfe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_it8n0"]
@@ -36,12 +37,9 @@ region = Rect2(192, 0, 32, 32)
 atlas = ExtResource("1_it8n0")
 region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p20bj"]
-load_path = "res://.godot/imported/MainCharacterIdle (32 x 32).png-d368d9e06e77302e393020aa681db7a4.ctex"
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8di4"]
-atlas = SubResource("CompressedTexture2D_p20bj")
-region = Rect2(96, 0, 32, 32)
+atlas = ExtResource("2_pbq55")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p20bj"]
 atlas = ExtResource("2_gbyq6")
@@ -163,7 +161,7 @@ texture_filter = 1
 position = Vector2(224, 97)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5vw27")
-animation = &"Run"
+animation = &"Jump"
 autoplay = "Idle"
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="."]
